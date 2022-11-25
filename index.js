@@ -102,4 +102,4 @@ app.use('/api/message',message)
 // listener
 
 
-server.listen(port, () => console.log(`server in running on ${port}`));
+server.listen(process.env.PORT || 3001, () => console.log(`server in running`));
