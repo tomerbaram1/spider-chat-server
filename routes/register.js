@@ -8,7 +8,7 @@ const {
 } = require("../controlees/authController");
 
 // Get all Method
-router.get("/", getUsers);
+// router.get("/", getUsers);
 
 // Post Method
 router.post("/", createUser);

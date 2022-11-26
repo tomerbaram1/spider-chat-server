@@ -1,6 +1,10 @@
 const {Message} = require('../models/messages');
 
-
+const deleteAllMessages = (async(req,res) =>{
+  await Message.deleteMany({})
+  
+  return res.send('all messages deleted')
+ })
 
  const saveMessage = async (name, message,room) => {
     
@@ -26,5 +30,6 @@ const {Message} = require('../models/messages');
 
   module.exports = {
     saveMessage,
-    getAllMessages
+    getAllMessages,
+    deleteAllMessages
 }
